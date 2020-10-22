@@ -13,12 +13,17 @@ def bisiesto():     #NOMBRE BISIESTO
         print ("El año introducido no es bisiesto")     #OUTPUT
 
     Mes(bisiesto)       #LLAMADA A SUBRUTINA MES() (EJERCICIO SEGUNDO)
+        #ENTREGAMOS COMO PARÁMETRO EL BOOL DE LA CONDICIÓN BISIESTO
 
 #SEGUNDA SUBRUTINA
 def Mes(bisiesto):      #NOMBRE MES
+    #DEBE RECIBIR UN PARÁMETRO
     a = int (input ("Introduzca un mes (número): "))        #PIDE NÚMERO DE MES
     if a == 2:      #SI ES FEBRERO
         if bisiesto:        #SI ES BISIESTO
+            #HEMOS UTILIZADO LA VARIABLE BISIESTO. QUE NO PERTENECE A ESTA SUBRUTINA.
+            #PODEMOS UTILIZARLA PORQUE LA HEMOS PASADO COMO PARÁMETRO.
+
             print ("El mes de Febrero en el año designado tiene 29 días.")      #OUTPUT
         else:       #SI NO
             print ("El mes de Febrero en el año designado tiene 28 días.")      #OUTPUT
